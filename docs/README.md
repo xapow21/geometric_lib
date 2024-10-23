@@ -1,10 +1,21 @@
-# Math formulas
-## Area
-- Circle: S = πR²
-- Rectangle: S = ab
-- Square: S = a²
+Библиотека geometric_lib может считать площадь и периметр таких геометрических фигур, как квадрат или круг.
+Файлы:
+1. square.py :
+    В ней содержится 2 функции: area и perimeter:
+        area(r) - принимает r - радиус окружности, возвращает math.pi * r * r - площадь окружности с радиусом r;
+        пример вызова для r = 2: area(2) = math.pi * 2 * 2 = 12.566370614359172;
 
-## Perimeter
-- Circle: P = 2πR
-- Rectangle: P = 2a + 2b
-- Square: P = 4a
+        perimeter(r) - принимает r - радиус окружности, возвращает math.pi * r * 2 - периметр окружности с радиусом r;
+        пример вызова для r = 2: perimeter(2) = math.pi * 2 * 2 = 12.566370614359172;
+2. circle.py :
+    В ней содержится 2 функции: area и perimeter:
+        area(a) - принимает a - сторона квадрата, возвращает a * a - площадь квадрата со стороной a;
+        пример вызова для r = 2: area(2) = 2 * 2 = 4;
+
+        perimeter(a) - принимает a - сторона квадрата, возвращает 4 * a - периметр квадрата со стороной a;
+        пример вызова для r = 2: area(2) = 4 * 2 = 8;
+История проекта: * e21d734 (HEAD -> main) добавлена репозитория docs где хранится README.md в котором хранится информация про библиотеку geometric_lib
+* fd64018 added comments to circle.py
+* ddd4a49 added comments to square.py
+* d078c8d (origin/main, origin/HEAD) L-03: Docs added
+* 8ba9aeb L-03: Circle and square added
