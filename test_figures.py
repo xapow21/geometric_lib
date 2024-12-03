@@ -99,4 +99,5 @@ class CircleTestCase(unittest.TestCase):
     def test_negative_per(self):
         res = circle.perimeter(-5)
         self.assertFalse(res)
-unittest.main()
+if __name__ == "__main__":
+    unittest.main()
