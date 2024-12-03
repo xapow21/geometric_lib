@@ -12,17 +12,28 @@ permissions:
   contents: write
 
 jobs:
-  test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
+  test-windows:
+    runs-on: windows-latest
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        submodules: false
+        python-version: '3.11'
+
+    - name: Run Unit Tests
+      run: |
+        python -m unittest discover -s . -p "test_figures.py"
+  test-ubuntu:
+  test-windows:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
 
     - name: Set up Python
       uses: actions/setup-python@v2
